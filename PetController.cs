@@ -14,8 +14,8 @@ namespace RestTest
                 return Ok(new Pet
                 {
                     Id = 1,
-                    Name = "Zoey",
-                    Type = "Cat"
+                    Name = "Feynman",
+                    Type = "Dog"
                 }
                 );
             }
