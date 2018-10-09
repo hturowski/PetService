@@ -14,5 +14,5 @@ Scale the deployment appropriately
 > kubectl scale deployments/rest-test --replicas=4
 
 You can change the deployed image
-> kubectl set image deployments/rest-test rest-test=rest-test-1
+> kubectl set image deployments/rest-test rest-test=rest-test-1  
 > kubectl set image deployments/rest-test rest-test=rest-test-2
