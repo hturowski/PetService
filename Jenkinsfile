@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build Docker Container') {
             steps {
                 echo 'Building..'
-				bat "docker build -t rest-test ."
+				bat "docker build -t rest-test:${env.BUILD_NUMBER} ."
             }
         }
         stage('Test') {
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+				bat "kubectl set image deployments/rest-test rest-test=rest-test:${env.BUILD_NUMBER}"
             }
         }
     }
