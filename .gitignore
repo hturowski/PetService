@@ -3,3 +3,4 @@ obj/
 out/
 runin.txt
 restTestDeployment.yml
+.vscode/
