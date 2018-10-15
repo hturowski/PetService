@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-				bat "kubectl --kubeconfig c:\Users\hturowski\.kube\config set image deployments/rest-test rest-test=rest-test:${env.BUILD_NUMBER}"
+				bat "kubectl --kubeconfig c:\\Users\\hturowski\\.kube\\config set image deployments/rest-test rest-test=rest-test:${env.BUILD_NUMBER}"
             }
         }
     }
